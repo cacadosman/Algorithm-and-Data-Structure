@@ -11,8 +11,8 @@ class Node {
 }
 
 class LinkedList{
-  public $head = NULL;
-	private $temp = NULL;
+  private $head = NULL;
+	private $tail = NULL;
 
   public function isEmpty(){
     return $this->head==NULL;
