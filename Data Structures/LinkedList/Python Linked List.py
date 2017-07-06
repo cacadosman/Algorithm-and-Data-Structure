@@ -84,12 +84,14 @@ class LinkedList:
         temp = self.head
         if not self.isEmpty():
             while temp.next != None:
-                if temp.next.data == key:
-                    temp.next = temp.next.next
-                    break;
-                elif temp.data == key and temp == self.head:
+                if temp.data == key and temp == self.head:
                     self.removeFirst()
                     break
+                elif temp.next == None:
+                    break
+                elif temp.next.data == key:
+                    temp.next = temp.next.next
+                    break;
                 temp = temp.next
 
     # find the node that matches the query.
